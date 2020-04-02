@@ -1,25 +1,2 @@
-server:
-  port: 8008
-
-spring:
-  application:
-    name: consul-provider-Student-B
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource      #当前数据源操作类型
-    driver-class-name: org.gjt.mm.mysql.Driver        #mysql驱动包
-    url: jdbc:mysql://localhost:3306/student?useUnicode=true&characterEncoding-utr-8&useSSL=false
-    username: root
-    password: xkf13152598590
-  ###consul注册中心地址
-  cloud:
-    consul:
-      host: localhost
-      port: 8500
-      discovery:
-        #hostname: 127.0.0.1
-        service-name: ${spring.application.name}
-  jpa:
-    hibernate:
-      ddl-auto: update   #jpa正向工程
-    show-sql: true  #显示sql
-    ###consul注册中心地址
+config:
+  info: "master branch,springcloud-config/config-test.yml version=1" 
